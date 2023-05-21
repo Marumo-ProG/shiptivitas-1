@@ -1,7 +1,14 @@
 import React from 'react';
+import { ReactDOM } from 'react-dom';
 import './Card.css';
+import Dragula from 'dragula';
+import { findDOMNode } from 'react-dom';
 
 export default class Card extends React.Component {
+  componentDidMount(){
+    var board = findDOMNode(this);
+    Dragula([board]);
+  }
   render() {
     let className = ['Card'];
     if (this.props.status === 'backlog') {
@@ -12,9 +19,11 @@ export default class Card extends React.Component {
       className.push('Card-green');
     }
     return (
-      <div className={className.join(' ')} data-id={this.props.id} data-status={this.props.status}>
-        <div className="Card-title">{this.props.name}</div>
-      </div>
+        <div className={className.join(' ')} data-id={this.props.id} data-status={this.props.status}>
+          <div className="Card-title">{this.props.name}</div>
+        </div>
     );
   }
+  
+  
 }

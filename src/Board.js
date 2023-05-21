@@ -1,10 +1,13 @@
 import React from 'react';
+import { findDOMNode } from 'react-dom';
 import Dragula from 'dragula';
 import 'dragula/dist/dragula.css';
 import Swimlane from './Swimlane';
 import './Board.css';
 
+
 export default class Board extends React.Component {
+
   constructor(props) {
     super(props);
     const clients = this.getClients();
@@ -21,6 +24,7 @@ export default class Board extends React.Component {
       complete: React.createRef(),
     }
   }
+  
   getClients() {
     return [
       ['1','Stark, White and Abbott','Cloned Optimal Architecture', 'in-progress'],
