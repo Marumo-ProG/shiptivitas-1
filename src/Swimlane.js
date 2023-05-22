@@ -5,10 +5,7 @@ import Dragula from 'dragula';
 import { findDOMNode } from 'react-dom';
 
 export default class Swimlane extends React.Component {
-  componentDidMount(){
-    var board = findDOMNode(this);
-    Dragula([board]);
-  }
+  
   render() {
     const cards = this.props.clients.map(client => {
       return (

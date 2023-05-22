@@ -7,7 +7,9 @@ import './Board.css';
 
 
 export default class Board extends React.Component {
-
+  componentDidMount(){
+    Dragula([]);
+  }
   constructor(props) {
     super(props);
     const clients = this.getClients();

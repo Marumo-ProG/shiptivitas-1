@@ -5,10 +5,7 @@ import Dragula from 'dragula';
 import { findDOMNode } from 'react-dom';
 
 export default class Card extends React.Component {
-  componentDidMount(){
-    var board = findDOMNode(this);
-    Dragula([board]);
-  }
+  
   render() {
     let className = ['Card'];
     if (this.props.status === 'backlog') {
