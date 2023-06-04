@@ -1,8 +1,6 @@
 import React from 'react';
-import { ReactDOM } from 'react-dom';
 import './Card.css';
-import Dragula from 'dragula';
-import { findDOMNode } from 'react-dom';
+
 
 export default class Card extends React.Component {
   

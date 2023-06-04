@@ -1,0 +1,1 @@
+I was able to get the card drag and drop working, but couldn't get them to stay in the other swimlanes when dragged to them, I found it difficult to work with referrences
