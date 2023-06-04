@@ -11,8 +11,22 @@ export default class Board extends React.Component {
       isContainer: function (el) {
         return el.classList.contains('Swimlane-dragColumn');
       }
-
+      
     });
+    drake.on('drop', function(el,target, sibling, source) {
+      if(target.parentElement.querySelector(".Swimlane-title").innerHTML === "Backlog"){
+        // if dragged in Backlog
+        el.className = "Card Card-grey"
+      }
+      if(target.parentElement.querySelector(".Swimlane-title").innerHTML === "In Progress"){
+        // if dragged in Backlog
+        el.className = "Card Card-blue"
+      }
+      if(target.parentElement.querySelector(".Swimlane-title").innerHTML === "Complete"){
+        // if dragged in Backlog
+        el.className = "Card Card-green"
+      }
+    })
   }
   constructor(props) {
     super(props);
